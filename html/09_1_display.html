@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div,p,h2{
+      /* display: inline; */
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+    }
+    span, a, strong {
+      /* display: block; */
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+    input {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+    }
+    /* display : flex */
+  </style>
+</head>
+<body>
+  <h1>block element</h1>
+  <!-- 
+    1. 언제든 새로운 줄에서 시작
+    2. 크기를 지정하지 않는 이상 좌우로 쭉 늘어난다.
+   -->
+  <div>div</div>
+  <p>p</p>
+  <h2>h</h2>
+  <hr>
+  <h1>inline element</h1>
+  <!-- 
+    1. 요소만큼 크기가 지정된다. (크기 조절 안됨)
+    2. display를 block으로 바꾸면 크기 조절이 된다.
+  -->
+  <span>span</span>
+  <a href="">a</a>
+  <strong>strong</strong>
+  <hr>
+  <h1>inline-block</h1>
+  <input type="text">
+  <input type="text">
+  <input type="text">
+</body>
+</html>

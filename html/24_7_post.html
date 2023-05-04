@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        border: 1px solid #ccc;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+      }
+
+      .txt_info {
+        width: 330px;
+        height: 150px;
+        float: left;
+        /* margin-right: 20px; */
+      }
+      .txt_info .writer_info {
+        margin-bottom: 20px;
+      }
+      .writer_info .profile_thum {
+        float: left;
+        margin-right: 20px;
+      }
+      .writer_info > .profile_thum > img {
+        border-radius: 50%;
+      }
+      .writer_info > .writer > .nm {
+        margin-bottom: 4px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .wr
+      .txt_info .cont {
+        clear: both;
+      }
+      .cont strong{
+        /* strong은 인라인 태그이니까 block으로 처리 */
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .cont p {
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .thum {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="txt_info">
+        <div class="writer_info">
+          <div class="profile_thum">
+            <img src="../images/profile.png" alt="" width="50px" />
+          </div>
+          <div class="writer">
+            <div class="nm">글쓴이</div>
+            <div class="time">1시간 전</div>
+          </div>
+        </div>
+        <div class="cont">
+          <strong
+            >아이들 저녁 메뉴 준비를 위한 식자재와 생활용품을 구입한 네이버
+            노브랜드 바구니</strong
+          >
+          <p>
+            한주에도 몇번씩 보게 되는 장~ 좀 더 저렴하고 좋은게 없을까?고민하는
+            요즘입니다. 아이들 식자재와 생활용품을 사기 위해
+          </p>
+        </div>
+      </div>
+      <div class="thum">
+        <img src="../images/blog_thum.jpg" alt="" width="150px" />
+      </div>
+    </div>
+  </body>
+</html>

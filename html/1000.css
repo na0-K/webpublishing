@@ -1,0 +1,45 @@
+/* .depth1 */
+.depth1 {
+  display: inline-block;
+  background: gray;
+  box-shadow: 0 0 10px 4px #fff;
+}
+.depth1 > li {
+  float: left;
+  position: relative;
+}
+.depth1 li:hover {
+  background: goldenrod;
+}
+.depth1 > li:hover .depth2 {
+  display: block;
+}
+
+/* .depth2 */
+.depth2 {
+  display: none;
+  position: absolute;
+  background: goldenrod;
+}
+.depth2 > li:hover {
+  background: brown;
+}
+.depth2 > li {
+  position: relative;
+}
+
+.depth2 > li:hover .depth3 {
+  display: block;
+}
+
+/* .depth3 */
+.depth3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: brown;
+}
+.depth3 a:hover {
+  background: green;
+}

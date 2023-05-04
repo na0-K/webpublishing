@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {
+        text-align: center;
+      } */
+      body * {
+        outline: 1px solid red;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: right;
+      }
+      span {
+        text-align: center;
+      }
+
+      .text {
+        /* justify : 양쪽정렬 */
+        text-align: justify;
+        /* 들여쓰기 */
+        text-indent: 20px;
+        /* 줄간격 */
+        line-height: 30px;
+      }
+
+      /* 
+      ir기법 - 글씨를 화면으로 보이지 않게 하는 것
+      효과적인 검색 엔진
+      이미지를 텍스트로 설명할때
+       */
+      .indent{
+        text-indent: -9999px;
+      }
+
+      /* 위아래 가운데 맞춤 */
+      .line-height {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        text-decoration: dashed; /*밑줄*/
+      }
+
+      a{
+        /* 밑줄 사라져요...★ */
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>첫번째 제목</h1>
+    <h2>두번째 제목</h2>
+    <h3>세번째 제목</h3>
+    <span>의미없는태그</span>
+    <p>
+      Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Qui
+      est, ipsa modi asperiores sapiente sequi illum cumque voluptate eveniet.
+      Praesentium corrupti rerum expedita? Numquam fuga commodi saepe adipisci
+      fugit quasi!
+    </p>
+
+    <div class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque non
+      nostrum, dignissimos id labore eum suscipit. Qui dolorem in reprehenderit
+      numquam! Voluptate quam deserunt eum iure obcaecati, adipisci incidunt
+      accusantium.
+    </div>
+    <div class="indent">
+      이름1
+    </div>
+
+    <div class="line-height">
+      이름2 <br>
+      이름3
+    </div>
+
+    <a href="">a tag</a>
+  </body>
+</html>

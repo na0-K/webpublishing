@@ -1,0 +1,66 @@
+<!-- 
+포지션(position)
+relatvie - 상대적인, 원래 위치를 기준으로 이동
+absolute - 절대적인, 다른 요소를 기준으로 이동
+fixed - 고정된, viewport를 기준으로
+
+포지션을 지정해주면 개체가 마크업 순서 상관없이 위로 올라오게된다.
+abolute, fixed는 빈자리를 만들지 않는다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body > div {
+        width: 200px;
+        height: 200px;
+        margin: 100px;
+        border: 5px dotted #888;
+      }
+      div > div {
+        width: 100%;
+        height: 100%;
+      }
+      .box1 {
+        position: relative; /* 기본값 static */
+        left: 100px;
+        /* top: 200px; */
+        bottom: -200px;
+        z-index: 1; /* 기본값 0, 정수값만 가능 */
+        background: orange;
+      }
+      .box2 {
+        position: relative;
+        left: 200px;
+        z-index: 2; /* 값이 커질수록 위로 올라온다. */
+        background: green;
+      }
+      .box3 {
+        position: relative;
+        left: 50px;
+        z-index: 1;
+        bottom: 250px;
+        background: navy;
+      }
+      /*
+      z-index는 position이 있을때만 지정가능 
+      z-index 작성할때 백단위나 천단위로 쓰는게 편리하다
+       */
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box1">box1</div>
+    </div>
+    <div>
+      <div class="box2">box2</div>
+    </div>
+    <div>
+      <div class="box3">box3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-weight: bold;
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+      /* a에 링크가 걸렸을 때 */
+      a:link {
+        color: green;
+      }
+      /* 링크 접속을 했었을 때 */
+      a:visited {
+        color: orange;
+      }
+      /* 마우스를 올렸을 때 */
+      a:hover {
+        color: hotpink;
+        text-decoration: underline;
+      }
+      /* 누르고 있을 때 */
+      a:active {
+        color: yellow;
+      }
+      /* 상속 우선 순위 : love & hate */
+
+      div {
+        display: inline-block;
+        background: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 20px;
+        border: 3px solid teal;
+      }
+      div:hover {
+        background: hotpink;
+      }
+      div:active {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://naver.com">link</a>
+    <br />
+    <div>click</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!-- 37_1_float_layout -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container{
+        width: 100%;
+        border: 8px solid #000;
+        /* 크기가 지정된 요소를 가운데 정렬 */
+        margin: auto; /* 0 auto 중요!! */
+      }
+      .box1{
+        height: 100px;
+        background: tomato;
+      }
+      .box2{
+        width: 20%;
+        height: 300px;
+        background: lightgreen;
+        float: left;
+      }
+      .box3{
+        width: 60%;
+        height: 300px;
+        background: plum;
+        float: left;
+      }
+      .box4{
+        width: 20%;
+        height: 300px;
+        float: left;
+        background: skyblue;
+      }
+      .box5{
+        clear: both;
+        height: 100px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+    </div>
+  </body>
+</html>

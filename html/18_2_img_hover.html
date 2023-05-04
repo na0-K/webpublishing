@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img_wrap{
+        display: block;  /* a태그가 inline요소니까.. */
+        width: 400px;
+        height: 266px;
+        border: 5px solid #000;
+        overflow: hidden;  /* 이미지 커졌을때 안보이게.. */
+      }
+      .img_wrap img:hover{
+        width: 420px;
+        height: 280px;
+        /* 중심으로 확대되는 것처럼 보이기 위해서 음수값.. */
+        margin-left: -10px;
+        margin-top: -7px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" class="img_wrap">
+      <img src="../images/img.jpg" alt="" />
+    </a>
+  </body>
+</html>

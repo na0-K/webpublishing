@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      display: inline-block;
+      background-color: aqua;
+    }
+    /* 구조 의사 클래스 */
+    div:first-child{
+      /* border-width: 2px;
+      border-style: solid;
+      border-color: red; */
+      border: 2px solid red;
+    }
+    div:nth-child(2){
+      border-style: dashed;
+    }
+    div:nth-child(3){
+      border-style: dotted;
+    }
+    div:nth-child(4){
+      border-style: none;
+    }
+    div:nth-child(5){
+      border-style: solid dashed dotted;
+    }
+    div:nth-child(6){
+      width: 0;
+      height: 0;
+      background:none;
+      border-width: 50px;
+      border-style: solid;
+      border-color: transparent black transparent black;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

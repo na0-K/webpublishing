@@ -1,0 +1,29 @@
+<!-- 25_2_table -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+      }
+      .A{
+        text-align: center;
+        line-height: 300px;
+      }
+      .box.B{
+        display: table-cell; /* td처럼 보여줌 */
+        vertical-align: middle;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box A">중앙정렬</div> <!-- 줄바꿈 이상하게 됨 -->
+    <div class="box B">중앙<br>정렬</div>
+  </body>
+</html>

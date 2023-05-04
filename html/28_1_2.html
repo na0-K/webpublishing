@@ -1,0 +1,41 @@
+<!-- 
+포지션(position)
+relatvie - 상대적인, 원래 위치를 기준으로 이동
+          다른 레이아웃에 영향을 안 미친다. 약간 이동하기위해 사용
+absolute - 절대적인, 다른 요소를 기준으로 이동
+fixed - 고정된, viewport를 기준으로
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        display: inline-block;
+        padding: 2em 3em;
+        background: tomato;
+        color: #fff;
+        text-decoration: none;
+      }
+      a:hover {
+        background: darkred;
+      }
+      a:active{
+        position: relative;
+        top: 100px;
+        /* 
+        margin-top안쓰는 이유
+        단독으로 쓰면 상관없지만 여러 요소들이 있을때는 레이아웃이 밀리기 때문. 즉, 다른 곳에 영향을 주지않기위해 position 사용
+        */
+
+      }
+    </style>
+  </head>
+  <body>
+    <a href="">CLICK</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nesciunt maxime? Porro culpa maiores quibusdam laboriosam ad dicta rerum, amet, repudiandae aspernatur aliquid sed ullam accusamus voluptas perspiciatis reprehenderit nobis.</p>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-flex;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+
+      /* 그라디언트는 색깔이 아니라 이미지로 표현된다. */
+      /* 선형 */
+      div:nth-child(1) {
+        background: linear-gradient(crimson, skyblue);
+      }
+      div:nth-child(2) {
+        background: linear-gradient(to right top, crimson, skyblue);
+      }
+      div:nth-child(3) {
+        background: linear-gradient(190deg, crimson, skyblue);
+      }
+      div:nth-child(4) {
+        background: linear-gradient(crimson 30%, skyblue 70%);
+      }
+      div:nth-child(5) {
+        background: linear-gradient(
+          crimson,
+          skyblue,
+          green,
+          yellow,
+          white,
+          grey
+        );
+      }
+      div:nth-child(6) {
+        background: linear-gradient(45deg, crimson 50%, skyblue 50%);
+      }
+      div:nth-child(7) {
+        background: repeating-linear-gradient(crimson, skyblue 10%);
+      }
+      div:nth-child(8) {
+        background: repeating-linear-gradient(
+          45deg,
+          crimson 0%,
+          crimson 5%,
+          skyblue 5%,
+          skyblue 10%
+        );
+      }
+
+      /* 원형 */
+      /* circle를 넣는 이유는 원의 형태를 유지하기 위해서..! */
+      div:nth-child(9) {
+        background: radial-gradient(circle, crimson, skyblue);
+      }
+      div:nth-child(10) {
+        background: radial-gradient(circle, green, crimson, skyblue);
+      }
+      div:nth-child(11) {
+        background: repeating-radial-gradient(
+          circle,
+          crimson 0%,
+          crimson 5%,
+          skyblue 5%,
+          skyblue 10%
+        );
+      }
+
+      /* 기타 */
+      div:nth-child(12) {
+        background: conic-gradient(from 90deg, crimson, skyblue);
+      }
+
+      div:nth-child(13) {
+        background: radial-gradient(black 3px, transparent 4px),
+          radial-gradient(black 3px, transparent 4px),
+          linear-gradient(#fff 4px, transparent 0),
+          linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            #a4a4a4 75px,
+            #a4a4a4 76px,
+            transparent 77px,
+            transparent 109px
+          ),
+          linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            #a4a4a4 76px,
+            #a4a4a4 77px,
+            transparent 78px,
+            transparent 109px
+          ),
+          #fff;
+        background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px,
+          109px 109px;
+        background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 선형 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- 원형 -->
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+    <div></div>
+    <div></div>
+  </body>
+</html>

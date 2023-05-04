@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* em, rem은 폰트 크기에 영향을 받는다 */
+    p:nth-child(1) {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 16px;
+    }
+    p:nth-child(2) {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: 1em;
+    }
+    p:nth-child(3) {
+      font-style: italic;
+      font-style: 1rem;
+    }
+    em{
+      font-style: normal;
+    }
+    p:nth-child(5) {
+      font-weight: 700;
+      /* 
+      숫자가높을 수록 굵기가 굵다. 
+      100 thin
+      200 extra_light
+      300 light / semi light
+      400 regular
+      500 medium
+      600 semi bold
+      700 bold
+      800 extra bold
+      900 black 
+      */
+    }
+  </style>
+</head>
+<body>
+  <p>This is a paragraph</p>
+  <p>This is a paragraph</p>
+  <p>This is a paragraph</p>
+  <em>This is a paragraph</em>
+  <p>This is a paragraph</p>
+</body>
+</html>

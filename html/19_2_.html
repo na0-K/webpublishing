@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 2번째 자식이 div면 선택, 2번째 자식이 span1이므로 div2 선택안됨 */
+    div:nth-child(2){
+      background: lavender;
+    }
+    /* div중에서 2번째 자식 선택 */
+    div:nth-of-type(2){
+      background: lavender;
+    }
+    div:nth-child(5){
+      background: #b14b4b;
+    }
+  </style>
+</head>
+<body>
+  <div>div1</div>
+  <span>span1</span>
+  <span>span2</span>
+  <div>div2</div>
+  <div>div3</div>
+</body>
+</html>

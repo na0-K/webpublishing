@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      /* rem은 루트(최상위 조상)의 크기를 상속받는다. */
+      div {
+        display: inline-block;
+        border-style: solid;
+        font-size: 2rem;
+        margin: 0.5rem;
+        padding: 3rem;
+        background: orange;
+      }
+      /* .level1 {
+        font-size: 2rem;
+      }
+      .level2 {
+        font-size: 2rem;
+      }
+      .level3 {
+        font-size: 2rem;
+      }
+      .level4 {
+        font-size: 2rem;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="level1">
+      level1
+      <div class="level2">
+        level2
+        <div class="level3">
+          level3
+          <div class="level4">level4</div>
+        </div>
+      </div>
+    </div>
+    <div>levelZ</div>
+  </body>
+</html>

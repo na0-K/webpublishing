@@ -1,0 +1,170 @@
+<!-- 35_1_table -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table.A {
+        width: 50%;
+        height: 200px;
+        /* collapse : 표 테두리 합친다, separated는 분리 */
+        border-collapse: collapse;
+        border: 1px solid lightgray;
+        text-align: center;
+      }
+      table.A td {
+        border: 1px solid lightgray;
+      }
+      table.B {
+        border-collapse: collapse;
+        border: 1px solid lightgray;
+        text-align: center;
+      }
+      table.B th,
+      table.B td {
+        padding: 5px 10px;
+        border: 1px solid lightgray;
+      }
+      table.C {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      table.C th[scope="col"] {
+        padding: 5px 10px;
+        background: pink;
+      }
+      table.C tr {
+        border: 1px solid #000;
+      }
+      .score {
+        background-color: #ffe8d4;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="A">
+      <tr>
+        <!-- 하나의 열 -->
+        <!-- colspan : 가로로 병합 -->
+        <td colspan="2">1 / 2</td>
+        <!-- <td>2</td> -->
+        <td>3</td>
+        <!-- rowspan : 세로로 병합 -->
+        <td rowspan="2">4 / 8</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td rowspan="3">7/11/15</td>
+        <!-- <td>8</td> -->
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">9/10/13/14</td>
+        <!-- <td>10</td> -->
+        <!-- <td>11</td> -->
+        <td>12</td>
+      </tr>
+      <tr>
+        <!-- <td>13</td> -->
+        <!-- <td>14</td> -->
+        <!-- <td>15</td> -->
+        <td>16</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <table class="B">
+      <caption>
+        인적사항
+      </caption>
+      <!-- 표제목 -->
+      <thead>
+        <!-- 열의 머리글인 행들의 집합 -->
+        <tr>
+          <th scope="col">이름</th>
+          <!-- 셀 제목 -->
+          <th scope="col">나이</th>
+          <th scope="col">성별</th>
+          <th scope="col">사는곳</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">김철수</th>
+          <td>20</td>
+          <td>남</td>
+          <td>서울</td>
+        </tr>
+        <tr>
+          <th scope="row">박영희</th>
+          <td>20</td>
+          <td>여</td>
+          <td>전주</td>
+        </tr>
+        <tr>
+          <th scope="row">이사라</th>
+          <td>23</td>
+          <td>여</td>
+          <td>부산</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table class="C">
+      <caption>
+        성적표
+      </caption>
+      <colgroup>
+        <!-- 표의 열을 묶는 그룹을 정의 -->
+        <col />
+        <col />
+        <col />
+        <col span="2" class="score" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">번호</th>
+          <th scope="col">이름</th>
+          <th scope="col">학과</th>
+          <th scope="col">점수</th>
+          <th scope="col">등급</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <th scope="row">김철수</th>
+          <td>디자인과</td>
+          <td>80</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <th scope="row">박영희</th>
+          <td>경영학과</td>
+          <td>95</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <th scope="row">이강우</th>
+          <td>기계과</td>
+          <td>60</td>
+          <td>C</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">평균</td>
+          <td colspan="2">85</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

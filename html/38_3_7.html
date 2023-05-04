@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap{
+        position: relative;
+        width: 500px;
+      }
+      .wrap img{
+        display: block;
+        width: 100%;
+      }
+      .wrap:hover .dim{
+        display: block;
+      }
+      .dim{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        padding: 1em;
+        width: 100%;
+        box-sizing: border-box;
+        color: #fff;
+        background-color: rgba(0, 0, 0, .5);
+      }
+      .dim strong{
+        color: #fff;
+        font-size: 2em;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .dim strong:hover{
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="../images/strawberry.jpg" alt="" />
+      <div class="dim">
+        <strong>싱싱한 딸기</strong>
+        <p>싱싱한 딸기가 한근에 오천원!</p>
+      </div>
+    </div>
+  </body>
+</html>

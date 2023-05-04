@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 150px;
+      height: 150px;
+      border: 1px solid blue;
+      display: inline-block;
+    }
+    /* 감싸는 요소에 overflow */
+    div:nth-of-type(1){
+      overflow: hidden; /*넘치는 내용 가리기*/
+    }
+    div:nth-of-type(2){
+      /* overflow: scroll; /*넘치는 내용 스크롤*/
+      overflow-y: scroll;
+    }
+    div:nth-of-type(3){
+      overflow: auto; /*내용이 넘치면 스크롤 나타내게 해줌, ⭐*/
+    }
+    div:nth-of-type(4){
+      resize: both; /* 크기조절 가능 */
+      overflow: auto
+    }
+  </style>
+</head>
+<body>
+  <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odio repellat harum ullam velit voluptas culpa aut nam consectetur quasi cupiditate enim neque, eligendi non nostrum ut fugiat rerum impedit.</div>
+  <div>Alias quibusdam excepturi est expedita cupiditate labore earum soluta obcaecati corrupti iure dignissimos nam, asperiores animi deserunt maiores minus reiciendis adipisci nobis sed. Quisquam maiores ab ipsam praesentium cupiditate doloribus?</div>
+  <div>Harum pariatur eligendi facilis, eius iusto sint iste possimus facere quaerat nulla laborum ab, maxime voluptates fugit, natus incidunt velit totam ut aut culpa voluptatem molestias. Molestias quisquam in reprehenderit.</div>
+  <div>Cumque, quas. Temporibus inventore, at est quos iusto eaque asperiores unde odit cupiditate maxime doloremque iste, provident blanditiis repellendus ex impedit officiis itaque modi nam? Ipsa provident consequuntur cum quam.</div>
+</body>
+</html>

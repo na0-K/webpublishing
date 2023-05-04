@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 90%;
+        margin: auto;
+        /* outline: 1px solid #ccc; */
+      }
+
+      /* header */
+      #header {
+        padding: 30px;
+      }
+      #header h1 {
+        float: left;
+      }
+      h1 a {
+        color: #19ce60;
+        text-decoration: none;
+      }
+      #header .search_wrap {
+        float: left;
+        margin: 6px 30px 0;
+        width: 300px;
+        border: 2px solid #19ce60;
+      }
+      .search_wrap::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .search_wrap input {
+        float: left;
+        width: 270px;
+        height: 30px;
+        border: none;
+        /* outline: 1px solid red; */
+      }
+      .search_wrap .btn_search {
+        width: 30px;
+        height: 30px;
+        background: #19ce60 url(../images/search.png) no-repeat center/20px;
+        text-indent: -9999px;
+        border: none;
+      }
+      #header .gnb {
+        clear: both;
+        padding-top: 30px;
+      }
+      .gnb ul {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        list-style: none;
+        overflow: hidden;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+      }
+      .gnb ul a {
+        color: #19ce60;
+        text-decoration: none;
+      }
+      .gnb ul li {
+        float: left;
+        margin: 0.5em 0.7em;
+      }
+
+      /* main */
+      #main {
+        padding: 30px;
+      }
+      #main::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #main .news_stand {
+        float: left;
+        width: 550px;
+        box-sizing: border-box;
+      }
+      .news_stand h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #333;
+      }
+      .news_stand ul {
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        list-style: none;
+      }
+      .news_stand ul::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .news_stand ul li {
+        float: left;
+        width: calc(100% / 3);
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .news_stand ul li a {
+        display: block;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+        color: #333;
+        text-decoration: none;
+      }
+      .news_stand ul li a:hover {
+        background: #eee;
+      }
+
+      #main .side_menu {
+        float: right;
+        padding: 20px;
+        width: 150px;
+        outline: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      .side_menu a {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #333;
+        text-decoration: none;
+      }
+
+      /* footer */
+      #footer {
+        margin: 30px;
+        border-top: 1px solid #ccc;
+      }
+      #footer ul {
+        list-style: none;
+        text-align: center;
+        margin: 0.5em 0;
+      }
+      #footer ul li {
+        position: relative;
+        display: inline-block;
+        padding: 0 1em;
+      }
+      #footer ul li + li::after {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 45%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+
+      #footer ul li a {
+        text-decoration: none;
+        color: #777;
+      }
+
+      .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <h1><a href="/">NAVER</a></h1>
+        <div class="search_wrap">
+          <input type="text" />
+          <button class="btn_search">검색</button>
+        </div>
+        <nav class="gnb">
+          <!-- global navigation bar -->
+          <ul>
+            <li><a href="#mail">메일</a></li>
+            <li><a href="#cafe">카페</a></li>
+            <li><a href="#qna">지식인</a></li>
+            <li><a href="#blog">블로그</a></li>
+            <li><a href="#news">뉴스</a></li>
+            <li><a href="#shop">쇼핑</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <section class="news_stand">
+          <h2>뉴스스탠드</h2>
+          <ul>
+            <li><a href="">한국경제</a></li>
+            <li><a href="">전북일보</a></li>
+            <li><a href="">주간조선</a></li>
+            <li><a href="">동아일보</a></li>
+            <li><a href="">YTN</a></li>
+            <li><a href="">경향신문</a></li>
+          </ul>
+        </section>
+        <aside class="side_menu">
+          <a href="">로그인</a>
+          <a href="">ID &middot; PW 찾기</a>
+          <a href="">회원가입</a>
+        </aside>
+      </main>
+      <footer id="footer">
+        <h3 class="blind">정책 및 약관</h3>
+        <ul>
+          <li><a href="">회사소개</a></li>
+          <li><a href="">인재채용</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

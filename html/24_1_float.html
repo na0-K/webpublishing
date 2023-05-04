@@ -1,0 +1,30 @@
+<!-- 35_1_float -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* float를 하면 둥둥 뜨고 그 아래 요소들이 오는데 글씨는 이동이 안된다. */
+    img{
+      float: right;
+      border: 1px solid red;
+      background: white;
+    }
+    p{
+      border: 1px solid red;
+    }
+    p:nth-of-type(1){
+      clear: both;  /* float 영향 안 받도록 처리(float 지우기) */
+    }
+  </style>
+</head>
+<body>
+  <img src="../images/bird.png" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur sed eligendi distinctio eum error? Sit amet corrupti quaerat repellat laboriosam. Reiciendis quam id nemo saepe quae nesciunt iure sequi!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur sed eligendi distinctio eum error? Sit amet corrupti quaerat repellat laboriosam. Reiciendis quam id nemo saepe quae nesciunt iure sequi!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur sed eligendi distinctio eum error? Sit amet corrupti quaerat repellat laboriosam. Reiciendis quam id nemo saepe quae nesciunt iure sequi!</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- 33_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none; /* 앞에 불릿이 사라짐 */
+      }
+      /* 불릿 : 텍스트 앞에 주의를 끌기 위해 붙이는 기호 */
+      ul li {
+        /* border: 1px solid red; */
+        background: url(../images/sprite1.png) no-repeat left 8px / 8px;
+        padding-left: 16px;
+      }
+      ul li li {
+        /* 위의 코드를 상속받음 */
+        /* background: url(../images/sprite2.png) 이렇게 축약형으로 쓰면 다른 속성값들이 초기화 됨 */
+        background-image: url(../images/sprite2.png);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 제목은 목록 태그 바깥쪽에 작성 -->
+    <h1>메뉴판</h1>
+    <!-- 
+      ul : 순서가 없는 목록 (가장 많이 씀)
+      ol : 순서가 있는 목록 
+     -->
+    <ul>
+      <li>
+        coffee
+        <ul>
+          <li>아메리카노</li>
+          <li>카페라떼</li>
+          <li>카푸치노</li>
+        </ul>
+      </li>
+      <li>
+        milk
+        <ul>
+          <li>딸기 우유</li>
+          <li>초코 우유</li>
+          <li>바나나 우유</li>
+        </ul>
+      </li>
+      <li>
+        tea
+        <ul>
+          <li>녹차</li>
+          <li>홍차</li>
+          <li>밀크티</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ol>
+      <!-- insert number 플러그인 설치 -->
+      <!-- 숫자를 넣을 태그들 안에 커서를 둔 후 ctrl+alt+n 후 enter -->
+      <li>
+        1월
+        <ol>
+          <li>1일</li>
+          <li>2일</li>
+          <li>3일</li>
+          <li>4일</li>
+          <li>5일</li>
+        </ol>
+      </li>
+      <li>2월</li>
+      <li>3월</li>
+      <li>4월</li>
+      <li>5월</li>
+    </ol>
+
+    <hr />
+
+    아래 목록태그는 다른 태그 들어와도 상관없다.
+    <dl>
+      <div>
+        <dt>용어1</dt>
+        <dt>용어2</dt>
+        <dd>설명</dd>
+      </div>
+      <div>
+        <dt>description</dt>
+        <dd>
+          1. (~이 어떠한지에 대한) 서술[기술/묘사/표현] <br>
+          2. 일부[어떤], 온갖 종류 등의
+        </dd>
+      </div>
+    </dl>
+  </body>
+</html>

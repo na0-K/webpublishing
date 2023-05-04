@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div:nth-child(1) {
+        /* 뷰포트 너비의 n퍼센트 */
+        width: 50vw;
+        font-size: 10vw;
+        background: orange;
+      }
+      div:nth-child(2) {
+        /* 뷰포트 높이의 1% 길이와 동일 */
+        width: 10vh;
+        background: yellowgreen;
+      }
+      div:nth-child(3) {
+        /* 뷰포트 너비 또는 높이를 기준으로 하는 최소 값, 최대넓이보다 커져야 커짐 */
+        width: 50vmax;
+        background: red;
+      }
+      div:nth-child(4) {
+        /* 뷰포트 너비 또는 높이를 기준으로 하는 최대 값, 최대넓이만큼만 커짐 */
+        width: 50vmin;
+        background: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>vw</div>
+    <div>vh</div>
+    <div>vmax</div>
+    <div>vmin</div>
+  </body>
+</html>

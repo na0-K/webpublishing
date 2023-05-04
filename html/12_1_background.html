@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 250px;
+      height: 250px;
+      border: 1px solid;
+      margin: 10px;
+    }
+
+    div:nth-child(1){
+      background-color: pink;
+    }
+    div:nth-child(2){
+      background-image: url(../images/smiley.gif);
+    }
+    div:nth-child(3){
+      background-image: url(../images/sprite1.png);
+      background-repeat: no-repeat;
+      /* background-repeat: repeat-x; */
+      /* background-repeat: repeat-y; */
+    }
+    div:nth-child(4){
+      background-image: url(../images/sprite2.png);
+      background-repeat: no-repeat;
+      /* left right top bottom */
+      /* background-position: right bottom; */
+      /* background-position: 10px 30px; */
+      background-position: center;
+      /* background-position: 50% 50%; */
+    }
+    div:nth-child(5){
+      width: 500px;
+      background-image: url(../images/rock.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    div:nth-child(6){
+      background: pink url(../images/bird.png) no-repeat center;
+    }
+    .btn_cnt{
+
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div>
+    <span id="cnt"></span>
+    <button class="btn_cnt">눌러요</button>
+  </div>
+</body>
+</html>

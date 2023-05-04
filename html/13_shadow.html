@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        background: moccasin;
+      }
+      div.box1{
+        /* box-shadow: x y blur size color; */
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+        /* box-shadow: 0 0 0 10px #000; */
+      }
+      div.box2{
+        box-shadow: inset 0 10px 10px #000, 10px 0px 10px #ffa;
+      }
+      /* offset-x | offset-y | blur-radius | color */
+      h1{
+        text-transform: uppercase;
+        color: lawngreen;
+        text-shadow: 0 8px 8px yellow, 1px 1px 2px green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h1>text shadow</h1>
+  </body>
+</html>

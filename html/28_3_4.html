@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        position: relative;
+        display: inline-block;
+        padding: 1em;
+        margin: 5em;
+        background: gray;
+      }
+      .wrapper:hover .dropdown{  /* 마우스를 올린상황에서 dropdown */
+        display: block;
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        left: 80%;
+        bottom: 100%;
+        padding: 1em;
+        border-radius: 100px;
+        white-space: nowrap; /* wrapping에 영향 안 받는 한줄로 */
+        background: #000;
+        color: #fff;
+      }
+      .dropdown::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        background: linear-gradient(to right bottom,black 50%, transparent 50%);
+        /* border-top: 15px solid black;
+        border-left: 0px solid red;
+        border-right: 15px solid blue;
+        border-bottom: 15px transparent yellow; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      마우스를 올려주세요
+      <div class="dropdown">참 잘했어요🤗</div>
+    </div>
+  </body>
+</html>

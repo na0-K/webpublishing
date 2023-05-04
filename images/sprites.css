@@ -1,0 +1,22 @@
+.sprite2, .sprite3, .sprite1{
+	background: url(sprites.png) no-repeat;
+}
+
+.sprite2{
+	background-position: -100px 0;
+	width: 100px;
+	height: 100px;
+}
+
+.sprite3{
+	background-position: 0 0;
+	width: 100px;
+	height: 100px;
+}
+
+.sprite1{
+	background-position: -200px 0;
+	width: 100px;
+	height: 100px;
+}
+

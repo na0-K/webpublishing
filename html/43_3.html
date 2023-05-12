@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .wrapper{
+      position: relative;
+      /* border: 3px solid red; */
+    }
+    .wrapper video {
+      display: block;
+      width: 100%;
+    }
+    .wrapper .txt{
+      position: absolute;
+      top: 40%;
+      /* absolute, fixed 속성을 주면 inline처럼 된다.
+      그래서 width를 100%로 지정 */
+      width: 100%;
+      text-align: center;
+      font-size: 5vw;
+      font-weight: bold;
+      text-shadow: black 1px 0 10px;
+      color: white;
+      /* border: 3px solid yellow; */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <video src="https://www.unikorea.go.kr/promise/common/images/video_20181212.mp4" autoplay muted loop></video>
+    <div class="txt">
+      <p>영상을 배경으로 쓰기</p>
+      <p>영상 위에 글씨 쓰기</p>
+    </div>
+  </div>
+</body>
+</html>

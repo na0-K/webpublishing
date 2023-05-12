@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="text"] {
+        padding: 10px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid navy;
+        box-sizing: border-box; /* 10px이 30픽셀에 포함되게 */
+        font-size: 12px; /* placehorder에도 적용됨 */
+      }
+      input[type="text"]::placeholder {
+        color: skyblue;
+      }
+      input[type="text"]:focus {
+        background: lightgray;
+        outline: 2px solid red;
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+        position: fixed;
+        left: -9999px;
+        top: 0;
+      }
+      input[type="checkbox"] + label {
+        padding-left: 1.6em;
+        background: url(../images/check_off.png) no-repeat left / 16px;
+      }
+      input[type="checkbox"]:checked + label {
+        background-image: url(../images/check_on.png);
+      }
+      input[type="checkbox"]:focus + label {
+        outline: 2px solid red;
+      }
+
+      select {
+        padding: 5px;
+        width: 120px;
+        border: 2px solid darkred;
+        border-radius: 5px;
+        background: url(../images/smiley.gif) no-repeat calc(100% - 5px) / 16px;
+        /* 
+        calc(100% - 5px)
+        right 5px center
+        */
+        appearance: none;
+      }
+      /* ie(Internet Explore)에서 화살표 사라지게 */
+      select::-ms-expand {
+        display: none;
+      }
+
+      input[type="radio"] {
+        appearance: none;
+        position: fixed;
+        left: -9999px;
+        top: 0;
+      }
+      input[type="radio"] + label {
+        padding-left: 1.6em;
+        background: url(../images/radio_off.png) no-repeat left / 14px;
+      }
+      input[type="radio"]:checked + label {
+        background-image: url(../images/radio_on.png);
+      }
+
+      progress {
+        appearance: none;
+      }
+      progress::-webkit-progress-bar {
+        height: 10px;
+        border-radius:10px;
+        background-color: #eee;
+        box-shadow: inset 3px 3px 3px #ccc;
+      }
+      progress::-webkit-progress-value {
+        border-radius:10px;
+        background-color: red;
+        background: linear-gradient(to right, #fda9a9, rgb(255, 106, 106));
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="웹퍼블리싱" />
+    <div>
+      <input type="checkbox" name="" id="chk" />
+      <label for="chk">체크박스</label>
+    </div>
+    <select name="" id="">
+      <option value="">서울</option>
+      <option value="">전주</option>
+    </select>
+    <hr />
+    <div>
+      <input type="radio" name="choice" id="yes" checked />
+      <label for="yes">예</label>
+      <input type="radio" name="choice" id="no" />
+      <label for="no">아니오</label>
+    </div>
+    <progress id="progress" value="50" min="0" max="100"></progress>
+  </body>
+</html>

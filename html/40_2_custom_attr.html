@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    [data-name=아메리카노]{
+      background: yellow;
+    }
+    div::after{
+      /* content: '아메리카노'; */
+      content: attr(data-name);
+      /* 속성값을 가지고 올때 attr사용 */
+    }
+  </style>
+</head>
+<body>
+  <div data-name="아메리카노">커피 → </div>
+</body>
+</html>

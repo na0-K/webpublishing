@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        border: 5px solid #000;
+
+        display: flex;
+        flex-wrap: wrap;  /* 부모보다 너비가 넘칠때 줄바꿈이 된다. */
+        /* 줄바꿈이 되어야 확인이 가능하다. 즉, wrap일때만 확인 가능 */
+        align-content: flex-start;
+        /* space-around/between/evenly   */
+      }
+      .wrapper > div {
+        width: 50%;
+      }
+      .A {
+        background-color: hotpink;
+      }
+      .B {
+        background-color: yellow;
+      }
+      .C {
+        background-color: greenyellow;
+      }
+      .D {
+        background-color: skyblue;
+      }
+      .E {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="A">A</div>
+      <div class="B">B</div>
+      <div class="C">C</div>
+      <div class="D">D</div>
+      <div class="E">E</div>
+    </div>
+  </body>
+</html>

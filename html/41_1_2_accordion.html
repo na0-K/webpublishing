@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* reset */
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    a{
+      text-decoration: none;
+      color: inherit; /* 상속받은 색깔로 해주겠다. */
+    }
+
+    /* styling */
+    .gnb{
+      width: 200px;
+      margin: 50px auto;
+      background-color: #eee;
+      color: navy;
+      border-radius: 15px;
+      overflow: hidden; /* 서브메뉴가 튀어나오기 때문에 처리 */
+    }
+    .gnb ul ul{
+      display: none;
+      background-color: #ccc;
+    }
+    .gnb ul ul:target{
+      display: block;
+    }
+    .gnb a {
+      display: block;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="gnb">
+    <ul>
+      <li><a href="#sub1">메인메뉴01</a>
+      <ul id="sub1">
+        <li><a href="">서브메뉴01</a></li>
+        <li><a href="">서브메뉴02</a></li>
+        <li><a href="">서브메뉴03</a></li>
+      </ul></li>
+      <li><a href="#sub2">메인메뉴02</a>
+      <ul id="sub2">
+        <li><a href="">서브메뉴01</a></li>
+        <li><a href="">서브메뉴02</a></li>
+        <li><a href="">서브메뉴03</a></li>
+      </ul></li>
+      <li><a href="#sub3">메인메뉴03</a>
+      <ul id="sub3">
+        <li><a href="">서브메뉴01</a></li>
+        <li><a href="">서브메뉴02</a></li>
+        <li><a href="">서브메뉴03</a></li>
+      </ul></li>
+    </ul>
+  </nav>
+</body>
+</html>

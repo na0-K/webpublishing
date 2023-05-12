@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a[target] {
+        color: red;
+      }
+      a[target="_blank"] {
+        background: yellow;
+      }
+
+      /* 아래는 몰라도 된다. */
+      .yellow_large_box {
+      }
+      [class^="yellow"] {
+        /* yellow로 시작하는 클래스명 */
+        background: yellow;
+      }
+      [class$="box"] {
+        /* box로 끝나는 클래스명 */
+        padding: 10px;
+      }
+      [class*=large]{ /* large가 들어가는 클래스명 */
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://naver.com">네이버</a>
+    <a href="http://nate.com" target="_self">네이트</a>
+    <a href="http://daum.net" target="_blank">다음</a>
+    <hr />
+    <p class="yellow_large_box">노랗고 커다란 상자</p>
+    <p class="blacklarge">검은 큰 글씨</p>
+  </body>
+</html>

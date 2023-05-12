@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {margin: 0;padding: 0;}
+      ul{list-style: none;}
+      a{
+        text-decoration: none;
+        color: inherit;
+      }
+      img{
+        display: block;
+        width: 100%;
+      }
+
+      .container{
+        width: 800px;
+        margin: 0 auto;
+        outline: 5px solid red;
+      }
+      
+      /* header */
+      .header {
+        background: pink;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 1.6em;
+      }
+      .gnb ul {
+        display: flex;
+        /* outline: 1px solid red; */
+      }
+      .gnb ul li{
+        margin-left: 4em;
+      }
+
+      /* main */
+      .main {
+        background: green;
+        display: flex;
+      }
+      .main .aside {
+        background: skyblue;
+        padding: 2em;
+      }
+      .main .section {
+        background: greenyellow;
+        display: flex;
+        /* flex-grow: 1; */
+        padding: 2em;
+      }
+      .section ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .section li {
+        flex: 1 1 20%;
+      }
+      .main .lnb {
+        padding: 2em;
+        background: gray;
+      }
+      .lnb a{
+        white-space: nowrap;
+      }
+
+      /* footer */
+      .footer {
+        background: yellow;
+        padding: 1.6em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1><a href="/">flex</a></h1>
+        <nav class="gnb">
+          <ul>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴4</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <!-- left -->
+        <aside class="aside">aside</aside>
+        <!-- center -->
+        <section class="section">
+          <ul>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/img.jpg" alt=""></a></li>
+          </ul>
+        </section>
+        <!-- right -->
+        <div class="lnb">
+          <ul>
+            <li><a href="">로컬메뉴01</a></li>
+            <li><a href="">로컬메뉴02</a></li>
+            <li><a href="">로컬메뉴03</a></li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">footer</footer>
+    </div>
+  </body>
+</html>

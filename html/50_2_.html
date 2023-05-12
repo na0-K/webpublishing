@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>title</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background: teal;
+      border-radius: 50%;
+      
+      /* animation: ani 2s infinite alternate; */
+
+      /* animation-name: ani;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 3;
+      animation-direction: alternate;
+      animation-fill-mode: both; */
+      /* forward 끝나는 위치에 그대로 */
+
+      animation: ani 3s linear 0s alternate both infinite;
+    }
+    @keyframes ani {
+      from {
+        transform: translate(0,200%);
+        
+      }
+      25% {
+        transform: translate(200%,0);
+      }
+      50% {
+        transform: translate(400%,200%);
+      }
+      
+      75% {
+        transform: translate(600%,0);
+        
+      }
+      to {
+        transform: translate(800%,200%);
+
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

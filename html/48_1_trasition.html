@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+    }
+    div:nth-child(1) {
+      background: forestgreen;
+      /* CSS 프로퍼티의 값이 변화할 때, 프로퍼티 값의 변화가 일정 시간(duration)에 걸쳐 일어나도록 하는 것이다. */
+      transition: transform 1s;
+    }
+    div:nth-child(1):hover {
+      transform: scale(1.5);
+      /* transition: transform 3s; */
+      /* scale: 1.5; */
+    }
+    div:nth-child(2) {
+      background: moccasin;
+      transition: transform .5s;  /* 500ms */
+    }
+    div:nth-child(2):hover {
+      background: orange;
+    }
+    div:nth-child(3) {
+      background: salmon;
+      /* transition: transform 3s, background 1s; */
+      transition: all 1s;
+    }
+    div:nth-child(3):hover {
+      transform: scale(.8) rotate(360deg);
+      background: pink;
+    }
+    
+    </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid_container{
+      display: grid;
+      gap: 10px;
+      padding: 10px;
+      background: tomato;
+      grid-template-areas: 
+        "a1 a1 . . ."
+        "a5 a5 a5 a5 ."
+        ;
+    }
+    .grid_container > div{
+      padding: 20px;
+      text-align: center;
+      color: whitesmoke;
+      background: green;
+    }
+    .item1 {
+      grid-area: a1;
+    }
+    .item5 {
+      grid-area: a5;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid_container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+  </div>
+</body>
+</html>

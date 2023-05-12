@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      /* 공통 */
+      .inner {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0 30px;
+        /* outline: 1px solid pink; */
+      }
+
+      /* header */
+      .header .header_top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        /* outline: 1px solid red; */
+      }
+      .header_top h1 .hangul {
+        font-size: 48px;
+        color: #fff;
+        -webkit-text-stroke: 1px black;
+      }
+      .header_top h1 br ~ span {
+        margin: 0 2px;
+        padding: 0 2px;
+        color: white;
+        background: #000;
+      }
+      .header .gnb ul {
+        display: flex;
+        justify-content: space-evenly;
+        border-top: 3px solid #000;
+        border-bottom: 1px solid #000;
+      }
+      .gnb ul a {
+        display: block;
+        padding: 4px;
+      }
+
+      /* main */
+      .main {
+        margin-top: 20px;
+      }
+      .banner_section {
+        display: flex;
+        gap: 10px;
+      }
+      .banner_section .slide_banner {
+        position: relative;
+        width: 395px;
+        /* outline: 1px solid red; */
+      }
+      .slide_banner .dim{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+        box-sizing: border-box;
+        font: 2em sans-serif;
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, .5);
+      }
+      .banner_section .banner_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 395px;
+        /* outline: 1px solid red; */
+      }
+      .banner_section .banner_list li {
+        width: calc((100% - 10px) / 2);
+      }
+      .latest_section {
+        margin-top: 20px;
+      }
+      .latest_section h2 {
+        border-bottom: 2px solid #000;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .latest_section h2 span {
+        position: relative;
+        top: 10px;
+        padding: 10px;
+        background: #fff;
+      }
+      .latest_section ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .latest_section ul li {
+        /* width: calc((100% - 30px)/4); */
+        flex-grow: 1;
+        flex-basis: 20%;
+      }
+
+      /* footer */
+      .footer {
+        margin-top: 100px;
+        background: #888;
+      }
+      .footer .inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+      }
+      .footer_menu {
+        margin-bottom: 30px;
+        color: white;
+      }
+      .footer_menu a{
+        position: relative;
+        margin: 0 10px;
+      }
+      /* 첫번째 이후의 태그(두번째 태그부터) 선택 */
+      .footer_menu a + a::after {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 5px;
+        width: 1px;
+        height: 14px;
+        background: white;
+      }
+
+      .footer_menu ~ * {
+        color: #ccc;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contianer">
+      <header class="header">
+        <div class="inner">
+          <div class="header_top">
+            <h1>
+              <a href="/">
+                <span class="hangul">디자인</span><br />
+                <span>DE</span><span>SI</span><span>GN</span>
+              </a>
+            </h1>
+          </div>
+          <nav class="gnb">
+            <ul>
+              <li><a href="">Deginer</a></li>
+              <li><a href="">Graphic</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Digital</a></li>
+              <li><a href="">Essay</a></li>
+              <li><a href="">Feature</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="inner">
+          <section class="banner_section">
+            <!-- left -->
+            <div class="slide_banner">
+              <a href="">
+                <img src="../images/blog_thum.jpg" alt="" />
+                <div class="dim">맛없는 샐러드</div>
+              </a>
+            </div>
+            <!-- right -->
+            <ul class="banner_list">
+              <li>
+                <a href=""><img src="../images/blog_thum.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="../images/blog_thum.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="../images/blog_thum.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img src="../images/blog_thum.jpg" alt="" /></a>
+              </li>
+            </ul>
+          </section>
+          <section class="latest_section">
+            <h2><span>latest</span></h2>
+            <ul>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../images/pineapple.jpg" alt="" />
+                  <p>깊은 바다속 파인애플</p></a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <div class="footer_menu">
+            <a href="">회사소개</a>
+            <a href="">서비스이용약관</a>
+            <a href="">고객센터</a>
+            <a href="">정기구독</a>
+            <a href="">제휴문의</a>
+          </div>
+          <address>전라북도 전주시 완산구 중노송동</address>
+          <small>Copyright &copy; All rights reserved.</small>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

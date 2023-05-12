@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0;padding: 0;}
+    .wrapper{
+      width: 500px;
+      height: 500px;
+      border: 5px solid #000;
+      margin: auto;
+
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      
+      /* stretch - 기본값 */
+      justify-items: stretch; 
+      /* justify-items: start; */
+      /* justify-items: end; */
+      /* justify-items: center; */
+      
+      /* start - 기본값 */
+      /* grid-template-columns: repeat(3, minmax(50px, 150px)); */
+      justify-content: start;
+      /* justify-content: end; */
+      /* justify-content: center; */
+      /* justify-content: stretch; */
+      /* justify-content: space-around; */
+      
+      /* align-items: start; */
+      /* align-items : end; */
+      /* align-items : center; */
+      /* align-items : stretch; */
+      
+      /* grid-template-rows: repeat(3, minmax(50px, 150px)); */
+      /* align-content: start;
+      align-content: end;
+      align-content: center;
+      align-content: stretch; */
+      
+    }
+    .item {
+      background: hotpink;
+    }
+    .item:nth-child(5){
+      justify-self: start;
+      align-self: end;
+      order: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="item">
+      <h1>1</h1>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa consequuntur suscipit reprehenderit perferendis iste nesciunt quasi quos veritatis esse voluptates ab sit dolores earum sint, iure ut tenetur molestias.
+    </div>
+    <div class="item">
+      <h1>2</h1>
+      Ipsa sequi, inventore quod possimus, vero eveniet magnam, velit aliquam impedit officiis molestiae assumenda laudantium 
+    </div>
+    <div class="item">
+      <h1>3</h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div class="item">
+      <h1>4</h1>
+    </div>
+    <div class="item">
+      <h1>5</h1>
+    </div>
+    <div class="item">
+      <h1>6</h1>
+    </div>
+    <div class="item">
+      <h1>7</h1>
+    </div>
+    <div class="item">
+      <h1>8</h1>
+    </div>
+    <div class="item">
+      <h1>9</h1>
+    </div>
+  </div>
+</body>
+</html>

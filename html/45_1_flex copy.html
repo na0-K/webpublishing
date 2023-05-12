@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        border: 5px solid #000;
+
+        display: flex;
+
+      }
+      .A {
+        flex-shrink: 0; /* 넘칠때 flex 사이에서의 비율, 기본 1, 0은 절대값 */
+        flex-basis: 20%;  /* 주축방향의 크기 */
+        background-color: hotpink;
+      }
+      .B {
+        flex-grow: 1; /* 빈 자리일때 flex 사이에서의 비율만큼 자리 차지 */
+        flex-basis: 20%;
+        background-color: yellow;
+      }
+      .C {
+        flex: 1 0 20%; /* 늘어나는값 줄어드는값 크기 */
+        /* 
+        flex-grow : 늘어나는 값 (0)
+        flex-shrink : 줄어드는 값 (1)
+        flex-basis : 기본크기 (auto)
+         */
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="A">A</div>
+      <div class="B">B</div>
+      <div class="C">C</div>
+    </div>
+  </body>
+</html>

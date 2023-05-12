@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>성별</legend>
+      <!-- name 속성을 일치해야 선택이 가능하다. -->
+      <div>
+        <input type="radio" name="gender" id="male" checked/>
+        <label for="male">남자</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="female" />
+        <label for="female">여자</label>
+      </div>
+      <div>
+        <input type="radio" name="gender" id="other" />
+        <label for="other">기타</label>
+      </div>
+    </fieldset>
+    <hr />
+    <fieldset>
+      <legend>좋아하는 과일? (복수선택 가능)</legend>
+      <div>
+        <input type="checkbox" value="chk" />
+        <label for="strawberry">딸기</label>
+      </div>
+      <div>
+        <input type="checkbox" value="chk" /> <label for="apple">사과</label>
+      </div>
+      <div>
+        <input type="checkbox" value="chk" />
+        <label for="watermelon">수박</label>
+      </div>
+    </fieldset>
+    <hr />
+    <fieldset>
+      <legend>글자 입력</legend>
+      <div>
+        <input type="text" maxlength="10" placeholder="10글자 이내 입력" />
+      </div>
+      <div>
+        <input type="text" value="읽기모드" readonly />
+      </div>
+      <div>
+        <input type="text" value="수정불가" disabled />
+      </div>
+      <div><input type="password" placeholder="패스워드" /></div>
+      <input type="search" placeholder="검색용" />
+    </fieldset>
+    <hr />
+    <label for="ratio">평점</label>
+    <input type="range" min="1" max="5" value="5" />
+    <br />
+    <label for="allow">구매수량</label>
+    <input type="number" min="1" max="10" value="5" step="2" />
+    <br />
+    <input type="month" />
+    <input type="week" />
+    <input type="date" />
+    <input type="time" />
+    <hr />
+    <input type="color" /><br />
+    <input type="file" multiple />
+    <hr />
+    <!-- 제출을 누를때 정규식 체크 -->
+    <form action="">
+      <input type="email" placeholder="이메일" /><br />
+      <input type="tel" placeholder="전화번호" /><br />
+      <input type="url" placeholder="url" /><br />
+      <input type="submit" value="확인" />
+      <input type="reset" />
+      <br />
+      <input type="button" value="버튼" />
+      <input type="image" src="../images/button01.png" alt="" />
+      <!-- submit과 같은 버튼 -->
+    </form>
+  </body>
+</html>

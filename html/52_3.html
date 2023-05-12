@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        border: 5px solid #000;
+        grid-template-areas:
+          "h h h"
+          "a m n"
+          "f f f";
+      }
+      .wrapper > * {
+        padding: 3em;
+        text-align: center;
+      }
+      header {
+        grid-area: h;
+        background: red;
+      }
+      aside {
+        grid-area: a;
+        background: orange;
+      }
+      main {
+        grid-area: m;
+        background: yellow;
+      }
+      nav {
+        grid-area: n;
+        background: green;
+      }
+      footer {
+        grid-area: f;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>header</header>
+      <aside>aside</aside>
+      <main>main</main>
+      <nav>nav</nav>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

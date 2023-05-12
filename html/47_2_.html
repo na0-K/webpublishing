@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    [class^=wrapper]{
+      width: 200px;
+      height: 200px;
+      margin: 100px;
+      border: 2px dotted #999;
+    }
+    .wrapper1 .box{
+      width: 100%;
+      height: 100%;
+      background: teal;
+      /*
+      perspective는 원근감을 주기위해 사용.
+      요소가 여러개일 경우 맨 처음에 선언해야한다. 
+      */
+      transform: perspective(500px) rotateY(45deg);
+    }
+    .wrapper2 {
+      perspective: 600px;
+      perspective-origin: right top;
+    }
+    .wrapper2 .box{
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin: 8px;
+      background: tomato;
+      transform: rotateY(45deg);
+    }
+    </style>
+</head>
+<body>
+  <div class="wrapper1">
+    <div class="box">box1</div>
+  </div>
+  <div class="wrapper2">
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+    <div class="box">box7</div>
+    <div class="box">box8</div>
+    <div class="box">box9</div>
+    <div class="box">box10</div>
+  </div>
+</body>
+</html>

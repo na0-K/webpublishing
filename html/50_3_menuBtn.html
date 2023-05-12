@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu_btn {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: 100px;
+        background: none;
+        border: none;
+        outline: 1px solid red;
+      }
+      .menu_btn span, .menu_btn::before, .menu_btn::after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 3px;
+        background: #000;
+        transition: transform .3s;
+        transform-origin: left center;
+      }
+      .menu_btn::before {
+        content: "";
+        top: 30%;
+        transform-origin: center;
+      }
+      .menu_btn::after {
+        content: "";
+        top: 70%;
+        transform-origin: center;
+      }
+      
+      .menu_btn:hover span {
+        transform: translate(-50%, -50%) scaleX(0);
+      }
+      .menu_btn:hover::before {
+        transform: translate(-50%, -50%) rotate(45deg) scaleX(1.1);
+        top: 50%;
+        
+      }
+      .menu_btn:hover::after {
+        transform: translate(-50%, -50%) rotate(-45deg) scaleX(1.1);
+        top: 50%;
+        
+      }
+
+
+      .ani_btn{
+        padding: 1em 1.5em;
+        border-radius: 4px;
+        border-style: solid;
+        border-color: palevioletred;
+        text-shadow: 0 1px 1px white;
+        color: #c9265c;
+        background: pink;
+      }
+      .ani_btn:hover {
+        animation: shake .2s 3;
+      }
+
+      @keyframes shake {
+        25% {
+          transform: rotate(-5deg);
+        }
+        75% {
+          transform: rotate(5deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="menu_btn"><span></span></button>
+    <button class="ani_btn">흔들려요</button>
+  </body>
+</html>

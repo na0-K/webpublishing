@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        border: 5px solid #000;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .A {
+        align-self: flex-start;
+        background-color: hotpink;
+      }
+      .B {
+        align-self: center;
+        background-color: yellow;
+      }
+      .C {
+        align-self: flex-end;
+        background-color: greenyellow;
+      }
+      .D{
+        align-self: stretch;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="A">A</div>
+      <div class="B">B</div>
+      <div class="C">C</div>
+      <div class="D">D</div>
+    </div>
+  </body>
+</html>

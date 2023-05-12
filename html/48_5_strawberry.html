@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a{
+        text-decoration: none;
+        color: inherit;
+      }
+      .wrapper{
+        position: relative;
+        width: 400px;
+        overflow: hidden;
+      }
+      img{
+        display: block;
+        width: 100%;
+        transition: all 1s;
+      }
+      .wrapper:hover img{
+        transform: scale(1.5);
+      }
+      .wrapper:hover .dim {
+        opacity: 1  ;
+        transform: translate(0,-100%);
+      }
+      .dim{
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        position: absolute;
+        /* left: 0;
+        bottom: 0; */
+        padding: 1em;
+        width: 100%;
+        color: white;
+        background: rgba(0,0,0,.6);
+      }
+      /* display none인 상태에서는 :hover가 안됨
+      none block사이에 애니메이션 못 넣음 */
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="">
+        <img src="../images/strawberry.jpg" alt="딸기" />
+        <div class="dim">
+          <p>딸기 한 바구니에</p>
+          <strong>5000원</strong>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>

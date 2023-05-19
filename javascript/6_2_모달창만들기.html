@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dim {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #0005;
+        opacity: 0;
+        /* display가 flex이니까 opacity 활용 */
+        visibility: hidden; /* opacity때문에 버튼 안눌림 현상 제거 */
+        transition: all .3s;  /* 부드럽게 스스륵 */
+      }
+      .dim.show {
+        opacity: 1;
+        visibility: visible;
+        
+      }
+      
+      .modal {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        background: #fff;
+        padding: 60px 20px 20px;
+        margin: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px #0005;
+        box-sizing: border-box;
+        transform: scaleY(.2);
+        transform-origin: left top;
+        transition: all .3s;
+      }
+      .dim.show .modal{
+        transform: scaleY(1);
+      }
+
+      .btn_close {
+        position: absolute;
+        bottom: 10%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn_open">열기</button>
+    <div class="dim">
+      <div class="modal">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum totam,
+        corrupti magnam, perspiciatis facere iusto quasi placeat nihil,
+        doloribus illum soluta accusamus quibusdam commodi? Laborum error
+        cupiditate nesciunt dignissimos omnis!
+        <button class="btn_close">닫기</button>
+      </div>
+    </div>
+
+    <script>
+      const $ = (select) => document.querySelector(select);
+
+      $('.btn_open').addEventListener('click', ()=> {
+        $('.dim').classList.add('show')
+      })
+      $('.btn_close').addEventListener('click', ()=> {
+        $('.dim').classList.remove('show')
+      })
+    </script>
+  </body>
+</html>

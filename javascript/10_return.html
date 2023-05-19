@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <button>다시하기</button>
+    <script>
+      let drainage = prompt("어떤 수의 배수인지 알고 싶으신가요?");
+      let num = prompt(`${drainage}의 배수인지 알고 싶은 숫자를 쓰세요`);
+
+      function checkDrainage() {
+        if (num % drainage === 0) {
+          return `${drainage}의 배수가 맞습니다.`;
+        } else {
+          return `${drainage}의 배수가 아닙니다.`;
+        }
+      }
+
+      document.querySelector("button").addEventListener("click", () => {
+        window.location.reload();
+      });
+
+      document.querySelector("h1").innerHTML = checkDrainage();
+      console.log(checkDrainage());
+      alert(checkDrainage());
+    </script>
+  </body>
+</html>

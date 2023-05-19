@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [ "산타패", "티볼리 ", "투산", "작은쿠퍼", "스포티지", "레이"];
+      
+
+      console.log("======== while ========");
+      /* while (condition){statement} */
+      let index = 0;
+      while (index < arr.length) {
+        console.log(arr[index]);
+        index++;
+      }
+
+      console.log("======== for ========");
+      /* for ([initialization]; [condition]; [final-expression]){statement} */
+      for (let index = 0; index < arr.length; index++) {
+        console.log(arr[index]);
+      }
+
+      console.log("======== forEach ========");
+      /* arr.forEach(callback(currentvalue[, index[, array]])[, thisArg]) */
+      // callback 함수는 함수의 함수. 즉, 매개변수인 함수를 콜백함수라 그런다.
+      arr.forEach(element => console.log(element));
+      arr.forEach((element, index) => console.log(element, index));
+
+      console.log("======== for..of ========");
+      /* for (variable of iterable) {statement;} */
+      for (const element of arr) {
+        console.log(element);
+      }
+
+    </script>
+  </body>
+</html>

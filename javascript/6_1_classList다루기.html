@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu {
+        display: none;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn_open">메뉴열기</button>
+    <button class="btn_close">메뉴닫기</button>
+    <button class="btn_toggle">메뉴토글</button>
+
+    <div class="menu">
+      <ul>
+        <li><a href="">메뉴01</a></li>
+        <li><a href="">메뉴02</a></li>
+        <li><a href="">메뉴03</a></li>
+        <li><a href="">메뉴04</a></li>
+        <li><a href="">메뉴05</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const $ = (select) => document.querySelector(select);
+
+      // 직접 css를 추가하는 것보다 클래스를 이용해서 추가하는 것을 권장
+      $(".btn_open").addEventListener("click", () => {
+        $(".menu").classList.add("show");
+      });
+
+      $(".btn_close").addEventListener("click", () => {
+        $(".menu").classList.remove("show");
+      });
+
+      $(".btn_toggle").addEventListener("click", () => {
+        $(".menu").classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

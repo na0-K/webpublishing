@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="" id="ctc">
+      <option value="hat">모자</option>
+      <option value="shirt">셔츠</option>
+      <option value="pants">바지</option>
+    </select>
+
+    <select name="" id="sub_ctc" class="hide"></select>
+
+    <!-- javascript -->
+    <script>
+      const $select1 = document.getElementById("ctc");
+      const $select2 = document.getElementById("sub_ctc");
+
+      function addSize(sizes, selectVal) {
+        let option = "";
+        sizes[selectVal].forEach((size) => {
+          option += `<option>${size}</option>`;
+        });
+        return option;
+      }
+
+      function addSubCategory(sizes, selectVal) {
+        $select2.innerHTML = addSize(sizes, selectVal);
+      }
+
+      function selectCategory(sizes, selectVal) {
+        if (selectVal === "hat") {
+          $select2.classList.add("hide");
+          $select2.innerHTML=""
+          return
+        }
+        if (selectVal === "shirt") {
+          $select2.classList.remove("hide");
+
+          // let sizes = [85, 90, 95];
+          // sizes.forEach((size) => {
+          //   option += `<option>${size}</option>`;
+          // });
+          // $select2.insertAdjacentHTML("beforeend", option);
+          addSubCategory(sizes, selectVal);
+          return
+        }
+        if (selectVal === "pants") {
+          $select2.classList.remove("hide");
+          addSubCategory(sizes, selectVal);
+          return
+        }
+      }
+
+      // let select2Val = $select2.value
+      $select1.addEventListener("change", () => {
+        const sizes = {
+          shirt: [85, 90, 95],
+          pants: [25, 26, 27],
+        };
+
+        let select1Val = $select1.value;
+        selectCategory(sizes, select1Val);
+      });
+    </script>
+  </body>
+</html>

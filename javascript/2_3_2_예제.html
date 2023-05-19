@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+      .alert {
+        display: none;
+        width: 200px;
+        background: orange;
+        margin-top: 1em;
+        padding: 1em;
+        border-radius: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="alert('아이디')">버튼1-아이디</button>
+    <button onclick="alert('패스워드')">버튼2-비밀번호</button>
+    <div class="alert">알림</div>
+    <script>
+      // function idAlert() {
+      //   document.querySelector(".alert").style.display = "block";
+      //   document.querySelector(".alert").innerHTML = "아이디를 입력하세요";
+      // }
+      // function pwAlert() {
+      //   document.querySelector(".alert").style.display = "blcok";
+      //   document.querySelector(".alert").innerHTML = "비밀번호를 입력하세요";
+      // }
+
+      function alert(msg) {
+        document.querySelector(".alert").style.display = "block";
+        document.querySelector(".alert").innerHTML = `${msg}을 입력하세요`;
+      }
+    </script>
+  </body>
+</html>

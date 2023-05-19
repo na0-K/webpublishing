@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>STOP</button>
+    <div></div>
+    <script>
+      // setTimeout(() => {
+      //   document.querySelector('body').innerHTML = '1초'
+      // }, 1000);
+      // setTimeout(() => {
+      //   document.querySelector('body').innerHTML = '2초'
+      // }, 2000);
+      // setTimeout(() => {
+      //   document.querySelector('body').innerHTML = '3초'
+      // }, 3000);
+
+      // .write() 누적 작성
+      // setTimeout(() => {document.write("1초");}, 1000);
+      // setTimeout(() => {document.write("2초");}, 2000);
+      // setTimeout(() => {document.write("3초");}, 3000);
+
+      //반복시간, 1초마다 코드실행
+      // setInterval(() => {
+      //   document.write("1초");
+      // }, 1000);
+
+      //증가하는 시간
+      let time = 0;
+      const timer = setInterval(() => {
+        time++;
+        document
+          .querySelector("body")
+          .insertAdjacentHTML("beforeend", `${time}초 `);
+        if (time === 10) {
+          clearInterval(timer);
+          console.log("10초후 멈춤");
+        }
+      }, 1000);
+
+      let $btn = document.querySelector("button");
+      $btn.addEventListener("click",() => {
+          clearInterval(timer);
+          console.log(`stop ${time}s`);
+        },
+        1000
+      );
+    </script>
+  </body>
+</html>

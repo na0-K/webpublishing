@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let car = [ "산타패", "티볼리 ", "투산", "카니발", "레이"];
+      let car = {}; // 빈 객체 생성
+      car.carName = "카니발";
+      car.carPrice = 30000000;
+      car.carYear = "2022";
+      car.carColor = ["white", "black", "gray"];
+
+      document.write(car.carName);
+      // document.write(car['carName'])
+      document.write(car.carYear);
+      document.write("<br>");
+      document.write(car.carPrice + "원");
+      document.write("<br>");
+      document.write(car.carColor[0]);
+
+      let carInfo = [
+        "산타패",
+        {
+          carName: "티볼리",
+          carPrice: 23000000,
+          carYear: "2020",
+          carColor: ["red", "black", "navy"],
+        },
+        {
+          carName: "투산",
+          carPrice: 27000000,
+          carYear: "2021",
+          carColor: ["white", "black", "gray"],
+        },
+        {
+          carName: "카니발",
+          carPrice: 30000000,
+          carYear: "2022",
+          carColor: ["white", "black", "gray"],
+          textInfo: () => {
+            return `${this.carYear}년산 ${this.carName}의 가격은 ${this.carPrice}입니다.<br>색상은 ${this.carColor}가 있습니다.`;
+          },
+        },
+        "레이",
+      ];
+    </script>
+  </body>
+</html>

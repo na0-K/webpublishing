@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      let score = prompt("점수를 입력해라", 0);
+      let grade = "F";
+
+      // if (score <= 100) {
+      //   if (score >= 90) {
+      //     grade = "A";
+      //   } else if (score >= 80) {
+      //     grade = "B";
+      //   } else if (score >= 70) {
+      //     grade = "C";
+      //   } else if (score >= 60) {
+      //     grade = "D";
+      //   }
+      //   document.querySelector("div").innerHTML = `
+      //   <span>${score}</span>점의 등급은 <span>${grade}</span>입니다.`;
+      // } else {
+      //   // 100점 초과
+      //   alert("잘못 입력함");
+      // }
+
+      if (score > 100) {
+        alert("잘못 입력함");
+        document.querySelector("div").innerHTML = "새로고침하셈";
+      } else if (score >= 90) {
+        grade = "A";
+      } else if (score >= 80) {
+        grade = "B";
+      } else if (score >= 70) {
+        grade = "C";
+      } else if (score >= 60) {
+        grade = "D";
+      }
+
+      if (score <= 100) {
+        document.querySelector("div").innerHTML = `
+      <span>${score}</span>점의 등급은 <span>${grade}</span>입니다.`;
+      }
+    </script>
+  </body>
+</html>

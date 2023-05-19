@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let student = {
+      name:'김아무',
+      age:22,
+      address:'전북 전주시 우아동',
+      tel:'010-2349-3942',
+    }
+
+    for (const key in student) {
+      if (Object.hasOwnProperty.call(student, key)) {
+        const element = student[key]; //student.key는 undefined 출력
+        console.log(`${key} : ${element}`);
+      }
+    }
+  </script>
+</body>
+</html>

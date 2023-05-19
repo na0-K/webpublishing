@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const $body = document.querySelector("body");
+
+      // n을 입력받아 n단 출력
+      const num = prompt("알고싶은 수의 구구단 구하기~", 1);
+
+      const parent = document.createElement("h1");
+      parent.append(`${num}단`);
+      $body.append(parent);
+
+      for (let i = 1; i < 10; i++) {
+        // console.log(`${num} x ${i} = ${i * num}`);
+        const newDiv = document.createElement("div");
+        newDiv.innerHTML = `${num} x ${i} = ${i * num}`;
+        $body.appendChild(newDiv);
+      }
+    </script>
+  </body>
+</html>

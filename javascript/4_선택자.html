@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">타이틀1</h1>
+    <h1 class="title">타이틀2</h1>
+    <h1 class="title" id="heading">타이틀3</h1>
+
+    <script>
+      document.querySelector(".title").style.color = "red";
+      document.querySelectorAll(".title")[0].style.backgroundColor = "yellow";
+      //  querySelectorAll은 nodelist로 반환 한다.
+
+      document.getElementsByClassName("title")[1].style.fontStyle = "Italic";
+      document.getElementById("heading").style.backgroundColor = "pink";
+      document.getElementsByTagName("h1")[1].style.fontSize = "50px";
+    </script>
+  </body>
+</html>

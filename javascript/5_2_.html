@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="height: 3000px">
+    <button>알럿창 열어줘</button>
+    <input type="text" />
+    <script>
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () => alert("알림"));
+      // .addEventListener("mouseover", () => alert("알림"));
+      // .addEventListener("mouseout", () => alert("알림")); // 마우스가 안에서 밖으로 빠져 나올때
+
+      window.addEventListener("scroll", () => console.log("scroll"));
+
+      document
+        .querySelector("input[type=text]")
+        .addEventListener("keydown", () =>
+          console.log(document.querySelector("input[type=text]").value)
+        );
+    </script>
+  </body>
+</html>

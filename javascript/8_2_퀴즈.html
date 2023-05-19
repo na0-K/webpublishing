@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>내가 태어난 년도는?</p>
+    <input type="text" /> <button>확인</button>
+    <script>
+      let challenge = 0;
+      let $btn = document.querySelector("button");
+      let $input = document.querySelector("input[type=text]");
+
+      $btn.addEventListener("click", () => {
+        let answer = $input.value;
+        challenge += 1;
+        if (answer === "1999") {
+          alert("성공!!");
+          challenge = 0;
+        } else if (challenge <= 3) {
+          alert("빨리 맞춰봐!!");
+          input.value = "";
+          console.log(answer);
+        } else {
+          alert("몽충몽충");
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

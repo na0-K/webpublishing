@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const students = [ "국예지", "김나영", "김다정", "김영서", "김하림", "배정은", "오윤정", "은영은", "이서인", "이아름", "이지애", "임희영", "한아름", ];
+
+      const name = prompt("출석 명단에 있는 이름을 확인 하세요");
+
+      let flag = false;
+      // for (let i = 0; i < students.length; i++) {
+      //   const student = students[i];
+      //   console.log(student);
+
+      //   if (name === student) {
+      //     alert("명단에 존재하는 이름입니다.");
+      //     flag = true;
+      //     break;
+      //   }
+      // }
+
+      // forEach는 try~catch문으로만 멈출수있다..
+      // students.forEach((student) => {
+      //   console.log(student);
+      //   if (name === student) {
+      //     flag = true;
+      //     alert("명단에 존재하는 이름입니다.");
+      //   }
+      // });
+
+      /* https://gurtn.tistory.com/199 */
+      // try {
+      //   students.forEach((student) => {
+      //     console.log(student);
+      //     if (student === name) {
+      //       flag = true;
+      //       alert("명단에 존재하는 이름입니다.");
+      //       throw student;
+      //     }
+      //   });
+      // } catch (e) {}
+
+      /* 
+      some이나 every 함수 사용해서 return 활용
+      - some 메서드는 하나라도 true가 반환되면 반복을 중지한다.
+      - every 메서드는 하나라도 false가 반환되면 반복을 중지한다.
+      */
+      // students.every((student) => {
+      //   console.log(student);
+      //   if (name === student) {
+      //     flag = true;
+      //     alert("명단에 존재하는 이름입니다.");
+      //     return false;
+      //   }
+      //   return true;
+      // });
+
+      if (flag === false) alert("명단에 존재하지 않는 이름입니다.");
+    </script>
+  </body>
+</html>

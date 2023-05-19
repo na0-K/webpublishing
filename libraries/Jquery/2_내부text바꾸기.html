@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+  </head>
+  <body>
+    <h1>h1 tag</h1>
+    <h2>h2 tag</h2>
+    <h3>h3 tag</h3>
+
+    <div>내용 1</div>
+    <div>내용 2</div>
+    <div>내용 3</div>
+
+    <script>
+      // alert($('h1').text())
+      $("h1").text($("h1").text() + "에 <span>바꿀 글자</span>");
+      // $('h1').html($('h1').text() + '에 <span>바꿀 html</span>')
+
+      $("h2").empty(); //태그안을 비우기
+      $("h3").remove(); //태그를 없애기
+      
+      $("div").eq(0).append("<strong>append</strong>");
+      $("div").eq(0).prepend("<em>append</em>");
+
+      $("<h2>추가 제목</h2>").appendTo("div:eq(1)");
+
+      $('<img src="./images/bird.png" alt="새">').appendTo("div:last");
+      // $('<img>').attr('src','./images/sun.png').appendTo('div:last')
+      $("<img>")
+        .attr({ src: "./images/sun.png", alt: "", class: "sss" })
+        .appendTo("div:last");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <style>
+      table {
+        width: 300px;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        학생 명단
+      </caption>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>김이름</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- javascript -->
+    <script>
+      const students = [ "국예지", "김나영", "김다정", "김영서", "김하림", "배정은", "오윤정", "은영은", "이서인", "이아름", "이지애", "임희영", "한아름", ];
+
+      
+      function printTable(array) {
+        array.forEach((data, index) => {
+          $("tbody").append(
+            `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${data}</td>
+            </tr>
+            `
+          );
+        });
+      }
+        
+      $("tbody").empty();
+      printTable(students)
+    </script>
+  </body>
+</html>

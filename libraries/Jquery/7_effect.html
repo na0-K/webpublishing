@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button>보여져라</button>
+    <button>숨겨라</button>
+    <button>보여 / 숨겨</button>
+
+    <button>정지</button>
+    <button>종료</button>
+    <div></div>
+    <script>
+      //보여
+      $("button")
+        .eq(0)
+        .on("click", function () {
+          // $("div").show(500);
+          // $('div').fadeIn()
+          $("div").slideDown()
+        });
+        // 숨겨
+        $("button")
+        .eq(1)
+        .on("click", function () {
+          // $("div").hide(100);
+          // $('div').fadeOut(500)
+          $("div").slideUp()
+        });
+      // 토글
+      $("button")
+        .eq(2)
+        .on("click", function () {
+          // console.log($("div").css("display"));
+          // if ($("div").css("display") !== "none") {
+            //   $("div").hide(100);
+            // } else {
+            //   $("div").show(500);
+          // }
+          
+          // $('div').toggle()
+
+          // $('div').fadeToggle()
+
+          // $('div').slideToggle(2000)
+          $('div').stop().slideToggle(2000)
+        });
+
+      // 정지
+      $('button').eq(3).on('click',function () {
+        $('div').stop()
+      })
+
+      // 중지
+      $('button').eq(4).on('click',function () {
+        $('div').finish()
+      })
+    </script>
+  </body>
+</html>

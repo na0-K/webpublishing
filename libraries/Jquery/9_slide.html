@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.7.0.js"></script>
+    <title>Document</title>
+    <style>
+      * { margin: 0; padding: 0; }
+      ul{list-style: none;}
+      a{text-decoration: none;}
+
+
+      .gnb{
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .gnb li{
+        text-indent: -9999px;
+      }
+      .gnb a{
+        display: block;
+        margin: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fffb;
+        transition: all .4s;
+      }
+      .gnb a:hover{
+        transform: scale(1.2);
+        background: #000;
+      }
+      section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        font-size: 5vw;
+        text-shadow: -4px 2px 2px rgba(255, 255, 255, 0.6);
+        color: azure;
+      }
+      section:nth-of-type(1){
+        background: #e26;
+      }
+      section:nth-of-type(2){
+        background: #7dc443;
+      }
+      section:nth-of-type(3){
+        background: #8f43c2;
+      }
+      section:nth-of-type(4){
+        color: gray;
+        text-shadow: -4px 2px 2px rgba(0, 0, 0, 0.6);
+        background: #dffc78;
+      }
+      section:nth-of-type(5){
+        background: #f35fa4;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="gnb">
+      <ul>
+        <li><a href="#s0">Section 1</a></li>
+        <li><a href="#s1">Section 2</a></li>
+        <li><a href="#s2">Section 3</a></li>
+        <li><a href="#s3">Section 4</a></li>
+        <li><a href="#s4">Section 5</a></li>
+      </ul>
+    </nav>
+    <section id="s0">Section1</section>
+    <section id="s1">Section2</section>
+    <section id="s2">Section3</section>
+    <section id="s3">Section4</section>
+    <section id="s4">Section5</section>
+
+    <script>
+      $('.gnb a').on('click',function (e) {
+        e.preventDefault()
+
+        // let index = $(this).parent().index();
+        let href = $(this).attr('href')
+
+        $('html, body').animate({
+          // scrollTop:$(`#s${index}`).offset().top
+          scrollTop:$(href).offset().top
+        })
+      })
+    </script>
+  </body>
+</html>

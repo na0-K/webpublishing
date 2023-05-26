@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.7.0.js"></script>
+    <title>Document</title>
+    <style>
+      body *:not(script) {
+        /* script를 제외한 모든 테두리 */
+        display: block;
+        padding: 5px;
+        margin: 5px;
+        border: 2px solid #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      div tag1
+      <div>
+        div tag2
+        <p>
+          p tag
+          <strong>strong</strong>
+        </p>
+      </div>
+      <ul>
+        <li>li tag1</li>
+        <li>li tag2</li>
+        <li>
+          li tag3
+          <a href="">a tag</a>
+        </li>
+        <li>li tag4</li>
+        <li>li tag5</li>
+      </ul>
+    </div>
+
+    <script>
+      // 부모탐색자 .parent()
+      $("p").parent().css("border-color", "red");
+
+      // 조상탐색자 .parents()
+      $("a").parents().css("border-color", "blue");
+      $("a").parents("ul").css("border-color", "hotpink");
+
+      // 자손탐택자 .children() .has('div').find('strong')
+      // $('div').children().css("border-color", "yellowgreen");
+      // $('div:has(div)').css('border-color','skyblue')
+      // $('div:has(div)').children().css('border-color','skyblue')
+      $("div").has("div").find("strong").css("background", "yellow");
+
+      // 형제 탐색자
+      // .siblings();모든 형제
+      // .next();바로밑에동생 .nextAll();모든동생
+      // .prev();바로위에형   .prevAll();모든형
+      $("li:has(a)").next().css("background", "orange");
+      $("li:eq(2)").nextAll().css("border-color", "black");
+
+      $("li").has("a").prev().css("background", "pink");
+      $("li:eq(2)").prevAll().css("border-color", "orange");
+
+      $("li:eq(2)").siblings().css("color", "red");
+
+
+      // strong을 기준으로 a태그를 찾아서 글씨 두껍게
+      $('strong').parent().parent().next().children('li').children().css('font-weight','bold')
+      $('strong').parents('div').find('a').css('color','brown')
+
+      // a을 기준으로 strong태그를 찾아서 
+      $('a').parents('div').find('strong').css('color','blue')
+    </script>
+  </body>
+</html>

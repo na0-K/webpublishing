@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background: yellowgreen;
+      }
+    </style>
+    <script src="jquery-3.7.0.js"></script>
+  </head>
+  <body>
+    <button>애니메이트</button>
+    <div></div>
+
+    <script>
+      let isAnimated = false
+      $("button").on("click", function () {
+        console.log($("div").width());
+        
+
+        if (isAnimated === true) {
+        // if ($("div").width() === 400) {
+          $("div").stop().animate(
+            {
+              width: "200px",
+              margin:"0",
+              background: "yellowgreen",
+            },
+            2000, "linear", () => { $("body").append("완료"); });
+          isAnimated = false
+          return
+        }
+
+        // $('div').animate(모양, 지속시간, 속도감, 완료된후 실행될 함수)
+        $("div").stop().animate(
+          {
+            width: "400px",
+            "margin-left": "200px",
+            background: "green",
+          },
+          2000, "linear", () => { $("body").append("완료"); } );
+          isAnimated = true
+      });
+    </script>
+  </body>
+</html>

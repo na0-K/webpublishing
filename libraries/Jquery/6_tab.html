@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.7.0.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 1rem;
+      }
+      .tab_container {
+        border: 1px solid #ccc;
+      }
+
+      .tabs {
+        background: darkred;
+        display: flex;
+      }
+      ul {
+        margin: 0;
+        padding: 2rem 0 0 1rem;
+        list-style: none;
+      }
+      a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        padding: 0.8rem 1rem;
+      }
+
+      .tab_cont {
+        display: none;
+        padding: 1rem;
+      }
+      .tab_cont strong {
+        font-size: 2rem;
+      }
+      .tab_cont p {
+        color: #777;
+      }
+
+      .active {
+        color: darkred;
+        border-radius: 2px 2px 0 0;
+        background: #fff;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab_container">
+      <ul class="tabs">
+        <li><a href="" class="active">자동차</a></li>
+        <li><a href="">웹툰</a></li>
+        <li><a href="">경제</a></li>
+        <li><a href="">뉴스</a></li>
+        <li><a href="">카페</a></li>
+      </ul>
+      <div class="tab_cont show">
+        <strong>자동차</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
+          est aliquid obcaecati quia dignissimos quam necessitatibus cumque
+          repellendus, alias expedita temporibus voluptates omnis eos blanditiis
+          et incidunt modi? Harum?
+        </p>
+      </div>
+      <div class="tab_cont">
+        <strong>웹툰</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
+          est aliquid obcaecati quia dignissimos quam necessitatibus cumque
+          repellendus, alias expedita temporibus voluptates omnis eos blanditiis
+          et incidunt modi? Harum?
+        </p>
+      </div>
+      <div class="tab_cont">
+        <strong>경제</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
+          est aliquid obcaecati quia dignissimos quam necessitatibus cumque
+          repellendus, alias expedita temporibus voluptates omnis eos blanditiis
+          et incidunt modi? Harum?
+        </p>
+      </div>
+      <div class="tab_cont">
+        <strong>뉴스</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
+          est aliquid obcaecati quia dignissimos quam necessitatibus cumque
+          repellendus, alias expedita temporibus voluptates omnis eos blanditiis
+          et incidunt modi? Harum?
+        </p>
+      </div>
+      <div class="tab_cont">
+        <strong>카페</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla
+          est aliquid obcaecati quia dignissimos quam necessitatibus cumque
+          repellendus, alias expedita temporibus voluptates omnis eos blanditiis
+          et incidunt modi? Harum?
+        </p>
+      </div>
+    </div>
+
+    <script>
+      $(".tabs a").on("click", function (e) {
+        // a태그한테 이벤트 붙여줄때 꼭 붙이기
+        e.preventDefault();
+
+        /* .tabs a */
+        // 다른 애들에게 있는 active 클래스 제거
+        // $(".tabs a").removeClass('active')
+        $(this).parent().siblings().children().removeClass("active");
+
+        // 누른 a태그에 active 클래스 추가
+        $(this).addClass("active");
+
+        /* .tab_cont */
+        // 누른 a태그가 몇번째인지 변수에 저장
+        let index = $(this).parent().index();
+
+        // 다른 애들에게 있는 show 클래스 제거
+        // $(".tab_cont").removeClass('show')
+        // $(".tab_cont").siblings().removeClass("show");
+
+        // 변수값에 맞는 tab_cont를 보여준다.
+        // $(".tab_cont").eq(index).addClass("show");
+
+        $(".tab_cont") .eq(index) .addClass("show")
+          .siblings(".tab_cont") .removeClass("show");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.7.0.js"></script>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <button>버튼클릭!</button>
+    <button>커서올려!</button>
+    <button>올리면빨강</button>
+    <button>토글 클래스</button>
+
+    <script>
+      $("button").eq(0).on("click", () => { alert("click!"); });
+
+      // $('button').eq(1).on('mouseover',()=>{$('button').eq(1).html("잘했으!")})
+      // $('button').eq(1).on('mouseout',()=>{$('button').eq(1).html("마우스올려!")})
+      $("button") .eq(1) .hover(
+        () => {
+          $("button").eq(1).html("잘했으!");
+        },
+        () => {
+          $("button").eq(1).html("마우스올려!");
+        }
+      );
+
+      $("button") .eq(2) .on({
+        mouseover: function () {
+          $(this).addClass('red')
+          $(this).text('내리면 원래대로')
+        },
+        mouseout: function () {
+          $(this).removeClass('red')
+          $(this).text('올리면 빨강')
+        },
+        click: function () {
+          alert($(this).text())
+        },
+      });
+
+      $("button").last().on('mouseover mouseout',function () {
+        $(this).toggleClass('red')
+      })
+
+    </script>
+  </body>
+</html>

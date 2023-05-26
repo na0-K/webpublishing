@@ -1,0 +1,51 @@
+@mixin ellipsis($lines: 1) {
+  @if ($lines < 1) {
+    @error "Unknown direction #{$lines}.";
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if ($lines == 1) {
+    white-space: nowrap;
+  } @else if ($lines >= 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin boderlayout {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+}
+
+@mixin sideMenu($bgColor) {
+  @include boderlayout;
+  h2 {
+    font-size: 1.2rem;
+    display: inline-block;
+    background: $bgColor;
+  }
+  a {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    &:hover {
+      background: $bgColor;
+    }
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: 781px) {
+    @content;
+  }
+}

@@ -1,0 +1,70 @@
+@mixin ellipsis($lines: 1) {
+  @if ($lines < 1) {
+    @error "Unknown direction #{$lines}.";
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if ($lines == 1) {
+    white-space: nowrap;
+  } @else if ($lines >= 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin pos($x: 50%, $y: 50%) {
+  position: absolute;
+  top: $x;
+  left: $y;
+
+  @if ($x==50%) and ($y==50%) {
+    transform: translate(-50%, -50%);
+  } @else if ($x==50%) {
+    transform: translate(-50%, 0);
+  } @else if ($y==50%) {
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin boderlayout {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+}
+
+@mixin sideMenu($bgColor) {
+  @include boderlayout;
+  h2 {
+    font-size: 1.2rem;
+    display: inline-block;
+    background: $bgColor;
+  }
+  a {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    &:hover {
+      background: $bgColor;
+    }
+  }
+}
+
+$bp: 640px;
+@mixin mobile {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: #{$bp + 1}) {
+    @content;
+  }
+}
+@mixin largePc{
+  @media (min-width:1024px) {
+    @content;
+  }
+}

@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.4 (last updated 14.2.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-webkit-input-placeholder {
+  color: unset;
+}
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+/* 글꼴 설정 */
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTL.woff);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTM.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTB.woff);
+  font-weight: 700;
+}
+body {
+  font-family: inter, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+body .main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/********* HEADER *********/
+.header .logo {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header .btn_open {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.header .btn_open::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px;
+  height: 4px;
+  border-top: 3px solid #333;
+}
+.header .btn_open::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px;
+  height: 11.6px;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+}
+.header .gnb {
+  display: none;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.header .gnb a {
+  display: block;
+}
+.header .gnb > ul > li > a {
+  font-size: 1.5rem;
+  padding: 1.6rem;
+  border-bottom: 1px solid #ccc;
+}
+.header .gnb > ul > li > a:hover {
+  background: #eee;
+}
+.header .gnb ul ul li a {
+  font-size: 1.2rem;
+  padding: 1.2rem;
+}
+.header .gnb ul ul li a:hover {
+  background: rgb(255, 255, 200);
+}
+@media (min-width: 481px) {
+  .header .btn_open {
+    display: none;
+  }
+  .header .gnb {
+    display: block !important;
+    overflow: visible;
+    padding: 0;
+  }
+  .header .gnb > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .gnb > ul li {
+    position: relative;
+  }
+  .header .gnb > ul li:hover ul {
+    display: block;
+  }
+  .header .gnb > ul li > a {
+    border: none;
+  }
+  .header .gnb ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border: 1px solid #ccc;
+    background: white;
+    white-space: nowrap;
+  }
+  .header .gnb li:nth-of-type(1) a {
+    border-radius: 1rem 0 0 1rem;
+  }
+  .header .gnb li:nth-of-type(1) ul {
+    left: 10%;
+  }
+}
+
+/********* MAIN *********/
+/* main */
+.section {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.section .list_img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.section .list_img img {
+  display: block;
+  width: 100%;
+}
+.section p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* lnb */
+.lnb {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+}
+.lnb h2 {
+  font-size: 1.2rem;
+  display: inline-block;
+  background: #fff0c0;
+}
+.lnb a {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.lnb a:hover {
+  background: #fff0c0;
+}
+
+.aside {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+}
+.aside h2 {
+  font-size: 1.2rem;
+  display: inline-block;
+  background: pink;
+}
+.aside a {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.aside a:hover {
+  background: pink;
+}
+
+@media (min-width: 481px) {
+  .main::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .section {
+    float: left;
+    width: calc(70% - 2rem);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .section .list_img {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lnb {
+    float: right;
+    width: calc(30% - 1rem);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 0;
+  }
+  .aside {
+    float: right;
+    width: calc(30% - 1rem);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 0;
+  }
+}
+@media (min-width: 781px) {
+  .section,
+  .lnb,
+  .aside {
+    float: none;
+    margin: 0;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  .main::after {
+    content: none;
+  }
+  .main .lnb {
+    width: 200px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .main .section {
+    width: 100%;
+  }
+  .main .aside {
+    width: 200px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+/********* FOOTER *********/
+.footer {
+  padding: 3rem;
+  background: gray;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.4rem;
+}

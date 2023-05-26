@@ -1,0 +1,203 @@
+@use "mixin";
+
+/********* HEADER *********/
+.header {
+  .logo {
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .btn_open {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 4px;
+      border-top: 3px solid #333;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 25%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 11.6px;
+      border-top: 3px solid #333;
+      border-bottom: 3px solid #333;
+    }
+  }
+  .gnb {
+    display: none;
+    @include mixin.boderlayout();
+    overflow: hidden;
+    a {
+      display: block;
+    }
+    > ul > li > a {
+      font-size: 1.5rem;
+      padding: 1.6rem;
+      border-bottom: 1px solid #ccc;
+      &:hover {
+        background: #eee;
+      }
+    }
+    ul ul li a {
+      font-size: 1.2rem;
+      padding: 1.2rem;
+      &:hover {
+        background: rgb(255, 255, 200);
+      }
+    }
+  }
+
+  @include mixin.tablet {
+    .btn_open {
+      display: none;
+    }
+    .gnb {
+      // 모바일에서 크기 늘렸을때 안보이는 것을 !important로 처리
+      display: block !important;
+      overflow: visible;
+      padding: 0;
+      > ul {
+        display: flex;
+        li {
+          position: relative;
+          &:hover ul {
+            display: block;
+          }
+        }
+        li > a {
+          border: none;
+        }
+      }
+      ul ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        border: 1px solid #ccc;
+        background: white;
+        white-space: nowrap;
+      }
+      li:nth-of-type(1) {
+        a {
+          border-radius: 1rem 0 0 1rem;
+        }
+        ul {
+          left: 10%;
+        }
+      }
+    }
+  }
+}
+
+/********* MAIN *********/
+/* main */
+.section {
+  @include mixin.boderlayout();
+  overflow: hidden;
+  .list_img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  p {
+    @include mixin.ellipsis(2);
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* lnb */
+.lnb {
+  @include mixin.sideMenu(#fff0c0);
+}
+.aside {
+  @include mixin.sideMenu(pink);
+}
+
+@include mixin.tablet {
+  .main::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .section {
+    float: left;
+    width: calc(70% - 2rem);
+    box-sizing: border-box;
+    .list_img {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .lnb {
+    float: right;
+    width: calc(30% - 1rem);
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+  .aside {
+    float: right;
+    width: calc(30% - 1rem);
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+}
+
+@include mixin.pc {
+  //float 초기화
+  .section,
+  .lnb,
+  .aside {
+    float: none;
+    margin: 0;
+  }
+
+  .main {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin: 1rem;
+    &::after {
+      content: none;
+    }
+    .lnb {
+      width: 200px;
+      order: -1;
+      flex-shrink: 0;
+    }
+    .section {
+      width: 100%;
+    }
+    .aside {
+      width: 200px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/********* FOOTER *********/
+.footer {
+  padding: 3rem;
+  background: gray;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.4rem;
+}

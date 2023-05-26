@@ -1,0 +1,20 @@
+/* 글꼴 설정 */
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTL.woff);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTM.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url(../fonts/InterGTB.woff);
+  font-weight: 700;
+}
+
+body {
+  font-family: inter, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
